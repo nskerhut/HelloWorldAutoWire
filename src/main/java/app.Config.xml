@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="helloWorldModel" class="com.csra.autowire.HelloWorldModel" autowire-candidate="true" p:myValue="HelloWorldawByType"/>
+	<!--  <bean id="HelloWorldModelByName" class="com.csra.autowire.HelloWorldModel" autowire-candidate="true" p:myValue="HelloWorldByName"/>-->
+	
+	<bean id="systemAutowiredByType" class="com.csra.autowire.HelloSystem" autowire="byType" />
+	
+	<bean id="systemAutowiredByName" class="com.csra.autowire.HelloSystem" autowire="byName" >
+		
+	</bean>
+	
+	<bean id="systemAutowiredCtor" class="com.csra.autowire.HelloSystem" autowire="constructor" />
+	
+	<bean id="systemAutowiredDefault" class="com.csra.autowire.HelloSystem" autowire="default" />
+</beans>
